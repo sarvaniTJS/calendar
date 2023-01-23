@@ -1,0 +1,35 @@
+<button
+    type="button"
+    class="event"
+    [ngStyle]="{'background-color':getEventColor(event)}"
+    *ngIf="event.details"
+    [ngbPopover]="event.details"
+    [popoverTitle]="event.name+ ' ' +  '('+getTime(event.startDate, event.endDate)+')'"
+    >
+        <span 
+        [innerText]="isAllDayEvent(event)"
+        style="font-weight: bold;"
+        ></span>
+        <span
+        [innerText]="event.name"
+        ></span>
+</button>
+<ng-template #popContent >
+    <div [innerHtml]="event.htmlDetails"></div>
+</ng-template>
+<button
+    type="button"
+    class="event"
+    [ngStyle]="{'background-color':getEventColor(event)}"
+    *ngIf="event.htmlDetails"
+    [ngbPopover]="popContent"
+    [popoverTitle]="event.name+ ' ' +  '('+getTime(event.startDate, event.endDate)+')'"
+    >
+        <span 
+        [innerText]="isAllDayEvent(event)"
+        style="font-weight: bold;"
+        ></span>
+        <span
+        [innerText]="event.name"
+        ></span>
+</button>

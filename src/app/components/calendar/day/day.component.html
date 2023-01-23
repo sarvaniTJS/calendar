@@ -1,0 +1,10 @@
+<div  class="date_"  >
+    <span 
+    [ngStyle]="{'background-color':getDateBgColor(day), 'color': getDateFontColor(day)}"
+    class="date" 
+    [innerText]="toDay(day)">
+</span>
+</div>
+<app-event *ngFor="let event of showEvent(day)" 
+[event] = "event"
+ ></app-event>

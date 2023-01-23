@@ -1,0 +1,74 @@
+.header {
+    margin: 2px
+}
+
+.month-name {
+    padding: 0px;
+    margin:0px;
+}
+
+.month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.butn {
+    /* color: white */
+    border: none;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.week-names {
+    /* border-top: solid 1px black;
+    border-left: solid 1px black; */
+    border-bottom: solid 1px #c7c7cc;
+    text-align: right;
+
+}
+
+button {
+    margin: 1px;
+}
+
+.date {
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    /* background-color: pink; */
+}
+
+.date_ {
+    text-align: right;
+    margin-bottom: 3px;
+}
+
+.day {
+    height: calc(100vh / 6 );
+    overflow-y:scroll;
+    max-width: 100%;
+    padding: 3px;
+    border-left: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5;
+
+}
+
+
+
+/* .week-names:nth-child(7) {
+    border-right: solid 1px black;
+} */
+
+.day:nth-child(7n) {
+    border-right: solid 1px #e5e5e5;
+}
+
+.event {
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    padding: 0px 0px 0px 5px;
+    font-size: 0.80em;
+}
